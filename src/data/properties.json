@@ -15,7 +15,7 @@
     "furnished": false,
     "featured": true,
     "status": "disponible",
-    "description": "Exemple illustratif. Belle villa moderne située à Kaporo, proche des commodités et des grands axes. Séjour lumineux, cuisine équipée, cour spacieuse et parking. Idéale pour une famille recherchant confort et sécurité au cœur de Conakry.",
+    "description": "Belle villa moderne située à Kaporo, proche des commodités et des grands axes. Séjour lumineux, cuisine équipée, cour spacieuse et parking. Idéale pour une famille recherchant confort et sécurité au cœur de Conakry.",
     "features": ["Parking", "Cour", "Forage", "Titre foncier", "Groupe électrogène"],
     "images": ["/properties/villa-moderne-4-chambres-kaporo.jpg"],
     "createdAt": "2026-07-01"
@@ -36,7 +36,7 @@
     "furnished": true,
     "featured": true,
     "status": "disponible",
-    "description": "Exemple illustratif. Appartement meublé de standing à Kaloum, prêt à habiter. Deux chambres, salon confortable, cuisine américaine et balcon. Parfait pour un séjour professionnel ou une location de moyenne durée en centre-ville.",
+    "description": "Appartement meublé de standing à Kaloum, prêt à habiter. Deux chambres, salon confortable, cuisine américaine et balcon. Parfait pour un séjour professionnel ou une location de moyenne durée en centre-ville.",
     "features": ["Meublé", "Climatisation", "Ascenseur", "Sécurité 24h/24"],
     "images": ["/properties/appartement-meuble-3-pieces-kaloum.jpg"],
     "createdAt": "2026-06-28"
@@ -57,7 +57,7 @@
     "furnished": false,
     "featured": true,
     "status": "disponible",
-    "description": "Exemple illustratif. Terrain plat et viabilisé de 800 m² à Nongo, dans une zone en plein développement. Titre foncier disponible, accès facile. Idéal pour un projet résidentiel ou un investissement immobilier.",
+    "description": "Terrain plat et viabilisé de 800 m² à Nongo, dans une zone en plein développement. Titre foncier disponible, accès facile. Idéal pour un projet résidentiel ou un investissement immobilier.",
     "features": ["Titre foncier", "Viabilisé", "Accès goudronné", "Bornage"],
     "images": ["/properties/terrain-viabilise-800m2-nongo.jpg"],
     "createdAt": "2026-06-20"
@@ -78,7 +78,7 @@
     "furnished": false,
     "featured": false,
     "status": "disponible",
-    "description": "Exemple illustratif. Grande villa familiale à Ratoma avec jardin, terrasse et dépendance. Cinq chambres spacieuses, double séjour et grande cuisine. Un cadre calme et résidentiel pour une famille nombreuse.",
+    "description": "Grande villa familiale à Ratoma avec jardin, terrasse et dépendance. Cinq chambres spacieuses, double séjour et grande cuisine. Un cadre calme et résidentiel pour une famille nombreuse.",
     "features": ["Jardin", "Terrasse", "Dépendance", "Parking 2 voitures", "Forage"],
     "images": ["/properties/villa-familiale-5-chambres-ratoma.jpg"],
     "createdAt": "2026-06-15"
@@ -99,7 +99,7 @@
     "furnished": true,
     "featured": false,
     "status": "disponible",
-    "description": "Exemple illustratif. Espace de bureau aménagé à Kipé, sur un axe passant et facilement accessible. Plusieurs espaces de travail, salle de réunion et sanitaires. Idéal pour une entreprise ou une profession libérale.",
+    "description": "Espace de bureau aménagé à Kipé, sur un axe passant et facilement accessible. Plusieurs espaces de travail, salle de réunion et sanitaires. Idéal pour une entreprise ou une profession libérale.",
     "features": ["Open space", "Salle de réunion", "Climatisation", "Parking", "Fibre optique"],
     "images": ["/properties/bureau-amenage-kipe.jpg"],
     "createdAt": "2026-06-10"

@@ -54,6 +54,11 @@
 /* ------------------------------------------------------------------ */
 html {
   scroll-behavior: smooth;
+  /* Garde-fou mobile : empêche tout défilement horizontal accidentel (un
+     élément qui déborde décalerait toute la page vers la gauche sur téléphone).
+     `clip` (et non `hidden`) ne crée pas de conteneur de défilement, donc
+     l'en-tête `sticky` continue de fonctionner. */
+  overflow-x: clip;
 }
 
 body {
@@ -62,6 +67,7 @@ body {
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-x: clip;
 }
 
 /* ------------------------------------------------------------------ */

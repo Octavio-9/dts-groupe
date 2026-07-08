@@ -62,17 +62,6 @@ export default function AProposPage() {
               signature — et au-delà, grâce à notre service de gestion.
             </p>
           </div>
-
-          {/* Honest placeholder: to be completed by the agency */}
-          <div className="mt-6 flex items-start gap-2 text-sm text-muted-foreground font-body bg-muted border border-line rounded-md p-4">
-            <Icon i="info" size={15} className="text-primary mt-0.5 shrink-0" />
-            <span>
-              <strong className="text-ink">À compléter par DTS GROUPE :</strong>{" "}
-              année de création, agrément officiel, historique et chiffres clés
-              vérifiés. Ces informations ne sont pas encore affichées pour éviter
-              toute affirmation non confirmée.
-            </span>
-          </div>
         </Reveal>
 
         <Reveal className="mt-14">

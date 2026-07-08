@@ -16,8 +16,7 @@ export function FeaturedProperties() {
           </div>
           <h2 className="font-headings font-bold text-3xl text-ink">Biens en vedette</h2>
           <p className="font-body text-muted-foreground text-base mt-2">
-            Des biens illustratifs — les vraies annonces seront mises à jour
-            prochainement.
+            Une sélection de biens à vendre et à louer à Conakry.
           </p>
         </div>
         <Link
@@ -44,19 +43,9 @@ export function FeaturedProperties() {
               price={p.price}
               currency={p.currency}
               image={p.images[0]}
-              illustrative
             />
           </Reveal>
         ))}
-      </div>
-
-      {/* Disclaimer */}
-      <div className="mt-8 flex items-start gap-2 text-sm text-muted-foreground font-body bg-background border border-line rounded-md p-4">
-        <Icon i="info" size={15} className="text-primary mt-0.5 shrink-0" />
-        <span>
-          Les biens affichés sont des exemples illustratifs. Les biens réels,
-          photos et prix seront fournis par DTS GROUPE SARL avant mise en ligne.
-        </span>
       </div>
     </section>
   );

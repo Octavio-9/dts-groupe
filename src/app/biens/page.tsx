@@ -39,7 +39,7 @@ export default async function BiensPage({
       <PageHero
         eyebrow="Catalogue"
         title="Nos biens"
-        subtitle="Maisons, appartements meublés, terrains et bureaux à vendre ou à louer à Conakry. Les biens ci-dessous sont des exemples illustratifs."
+        subtitle="Maisons, appartements meublés, terrains et bureaux à vendre ou à louer à Conakry."
       />
 
       <section className="w-full px-5 lg:px-20 py-10 bg-soft">

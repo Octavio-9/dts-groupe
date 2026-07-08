@@ -21,7 +21,6 @@ export function PropertyGrid({ properties }: { properties: Property[] }) {
             price={p.price}
             currency={p.currency}
             image={p.images[0]}
-            illustrative
           />
         </Reveal>
       ))}

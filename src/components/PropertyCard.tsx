@@ -16,7 +16,6 @@ export type PropertyCardData = {
   price: number | null;
   currency?: string;
   image?: string;
-  illustrative?: boolean;
 };
 
 /**
@@ -53,11 +52,6 @@ export function PropertyCard(p: PropertyCardData) {
         >
           {transactionLabel(p.transaction)}
         </span>
-        {p.illustrative && (
-          <span className="absolute top-3 right-3 text-[11px] font-medium px-2.5 py-1 rounded-full bg-navy/70 text-white">
-            Exemple
-          </span>
-        )}
       </div>
 
       {/* Body */}

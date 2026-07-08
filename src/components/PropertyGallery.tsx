@@ -14,13 +14,13 @@ export function PropertyGallery({
   const [active, setActive] = useState(0);
   const [failed, setFailed] = useState(false);
 
-  // No real photos yet (or file missing) — show a clearly-labelled placeholder.
+  // No photo available yet (or file missing) — show a neutral placeholder.
   if (!images || images.length === 0 || failed) {
     return (
       <div className="relative aspect-[16/10] w-full rounded-md bg-soft border border-line flex flex-col items-center justify-center gap-3">
         <Icon i="building" size={56} className="text-primary/30" />
         <span className="text-sm font-body text-muted-foreground">
-          Photo à venir — exemple illustratif
+          Photo à venir
         </span>
       </div>
     );
