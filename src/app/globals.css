@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/*  Design tokens — reproduced from the Banani "Site Immobilier DTS"    */
+/*  flow (style.css). Colors, radii, text sizes kept 1:1.               */
+/* ------------------------------------------------------------------ */
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #22303f;
+  --color-border: #dde4ec;
+  --color-input: #f4f7fb;
+  --color-primary: #1668b0;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #e8f1fb;
+  --color-secondary-foreground: #1668b0;
+  --color-accent: #e8531f;
+  --color-accent-foreground: #ffffff;
+  --color-navy: #0a2540;
+  --color-navy-foreground: #ffffff;
+  --color-muted: #f4f7fb;
+  --color-muted-foreground: #5d6b7a;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-foreground: #ffffff;
+  --color-ink: #22303f;
+  --color-line: #dde4ec;
+  --color-soft: #e8f1fb;
+
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 40px;
+  --radius: var(--radius-sm);
+
+  /* Fonts wired to next/font/google (see layout.tsx) */
+  --font-body: var(--font-inter), Inter, system-ui, sans-serif;
+  --font-headings: var(--font-space-grotesk), "Space Grotesk", system-ui, sans-serif;
+
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 15px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 30px;
+  --text-4xl: 38px;
+  --text-5xl: 52px;
+
+  --shadow-soft: 0 10px 30px rgba(10, 37, 64, 0.08);
+  --shadow-lift: 0 20px 50px rgba(10, 37, 64, 0.14);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Base                                                               */
+/* ------------------------------------------------------------------ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Animations cinématiques — subtiles, sans dépendance.                */
+/*  Voir docs/superpowers/specs/2026-07-08-cinematic-animations-design. */
+/* ------------------------------------------------------------------ */
+
+/* 1. Scroll-reveal (piloté par <Reveal>, IntersectionObserver).
+   L'état caché n'est appliqué que si JS est actif (classe `js` posée par le
+   script inline du layout) : sans JS, le contenu reste visible. */
+.dts-reveal-item {
+  opacity: 1;
+  transform: none;
+}
+html.js .dts-reveal-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  will-change: opacity, transform;
+}
+html.js .dts-reveal-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 2. Entrée en cascade du Hero (au chargement) ---------------------- */
+@keyframes dts-enter {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.dts-enter {
+  opacity: 0;
+  animation: dts-enter 0.7s ease-out forwards;
+  animation-delay: var(--enter-delay, 0ms);
+}
+
+/* 3. Ken Burns — zoom + pan très lents sur la photo du Hero --------- */
+@keyframes dts-ken-burns {
+  from {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.07) translate3d(-1.5%, -1.5%, 0);
+  }
+}
+.dts-kenburns {
+  animation: dts-ken-burns 30s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+/* 4. Parallaxe léger du fond du Hero au scroll (progressive) -------- */
+@supports (animation-timeline: scroll()) {
+  @keyframes dts-parallax {
+    to {
+      transform: translateY(12%);
+    }
+  }
+  .dts-parallax {
+    animation: dts-parallax linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100vh;
+  }
+}
+
+/* 5. Transitions de page (fondu natif, same-origin MPA) ------------- */
+@view-transition {
+  navigation: auto;
+}
+
+/* Réductions de mouvement : tout neutraliser ----------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  html.js .dts-reveal-item,
+  .dts-reveal-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .dts-enter {
+    opacity: 1;
+    animation: none;
+  }
+  .dts-kenburns,
+  .dts-parallax {
+    animation: none;
+  }
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}

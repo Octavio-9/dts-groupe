@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 110" width="100%" height="100%">
+  <!-- Chimney -->
+  <path d="M 145,32 L 145,12 L 155,12 L 155,37 Z" fill="#e8531f" />
+
+  <!-- Outer Roof -->
+  <path d="M 25,52 L 105,12 L 185,52 L 185,60 L 105,20 L 25,60 Z" fill="#e8531f" />
+
+  <!-- Inner Roof -->
+  <path d="M 25,63 L 105,23 L 185,63 L 185,69 L 135,44 Q 105,30 75,44 L 25,69 Z" fill="#e8531f" />
+
+  <!-- Left Key Blade (Orange) -->
+  <path d="M 13,75 L 23,69 L 85,69 L 85,81 C 81.1 81, 79.5 87, 77.25 87 C 75 87, 73.4 81, 69.5 81 C 65.6 81, 64 87, 61.75 87 C 59.5 87, 57.9 81, 54 81 C 50.1 81, 48.5 87, 46.25 87 C 44 87, 42.4 81, 38.5 81 C 34.6 81, 33 87, 30.75 87 C 28.5 87, 26.9 81, 23 81 Z" fill="#e8531f" />
+
+  <!-- Right Key Blade (Blue) -->
+  <path d="M 125,69 L 187,69 L 197,75 L 187,81 C 183.1 81, 181.5 87, 179.25 87 C 177 87, 175.4 81, 171.5 81 C 167.6 81, 166 87, 163.75 87 C 161.5 87, 159.9 81, 156 81 C 152.1 81, 150.5 87, 148.25 87 C 146 87, 144.4 81, 140.5 81 C 136.6 81, 135 87, 132.75 87 C 130.5 87, 128.9 81, 125 81 Z" fill="#1668b0" />
+  <rect x="132" y="74" width="48" height="2" rx="1" fill="#ffffff" />
+
+  <!-- Top Cycle Arrow (Orange) -->
+  <path d="M 85,75 A 20 20 0 0 1 125,75" fill="none" stroke="#e8531f" stroke-width="6" />
+  <polygon points="120,70 129,72 123,80" fill="#e8531f" />
+
+  <!-- Bottom Cycle Arrow (Blue) -->
+  <path d="M 125,75 A 20 20 0 0 1 85,75" fill="none" stroke="#1668b0" stroke-width="6" />
+  <polygon points="90,80 81,78 87,70" fill="#1668b0" />
+
+  <!-- Window Panes (Blue) -->
+  <rect x="97" y="67" width="7" height="7" rx="0.5" fill="#1668b0" />
+  <rect x="106" y="67" width="7" height="7" rx="0.5" fill="#1668b0" />
+  <rect x="97" y="76" width="7" height="7" rx="0.5" fill="#1668b0" />
+  <rect x="106" y="76" width="7" height="7" rx="0.5" fill="#1668b0" />
+</svg>

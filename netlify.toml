@@ -1,0 +1,16 @@
+# ---------------------------------------------------------------------------
+# Netlify — configuration de build du site DTS GROUPE (Next.js 16, SSR).
+#
+# L'adaptateur Next.js de Netlify (@netlify/plugin-nextjs / OpenNext) est
+# installé et mis à jour AUTOMATIQUEMENT dès que Netlify détecte Next.js.
+# On ne l'épingle donc PAS (recommandation officielle) : SSR, ISR, App Router
+# et next/image (via le Netlify Image CDN) fonctionnent sans config en plus.
+# ---------------------------------------------------------------------------
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  # Next.js 16 requiert Node >= 20 ; on aligne sur la version locale (22).
+  NODE_VERSION = "22"
